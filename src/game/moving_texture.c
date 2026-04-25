@@ -510,6 +510,7 @@ Gfx *movtex_gen_quads_id(s16 id, s16 y, void *movetexQuadsSegmented) {
     return NULL;
 }
 
+extern u8 castle_movtex_water[];
 extern u8 bbh_movtex_merry_go_round_water_entrance[];
 extern u8 bbh_movtex_merry_go_round_water_side[];
 extern u8 ccm_movtex_penguin_puddle_water[];
@@ -540,6 +541,8 @@ extern u8 ttm_movtex_puddle[];
  */
 void *get_quad_collection_from_id(u32 id) {
     switch (id) {
+	case CASTLE_MOVTEX_WATER:
+	    return castle_movtex_water;
         case BBH_MOVTEX_MERRY_GO_ROUND_WATER_ENTRANCE:
             return bbh_movtex_merry_go_round_water_entrance;
         case BBH_MOVTEX_MERRY_GO_ROUND_WATER_SIDE:
