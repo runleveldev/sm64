@@ -168,6 +168,13 @@ s32 intro_regular(void) {
 #endif
     print_intro_text();
 
+    {
+        if (gPlayer1Controller->buttonDown == QUIT_LEVEL_SELECT_COMBO)
+            gDebugLevelSelect = TRUE;
+        else
+            gDebugLevelSelect = FALSE;
+    }
+
     if (gPlayer1Controller->buttonPressed & START_BUTTON) {
         play_sound(SOUND_MENU_STAR_SOUND, gGlobalSoundSource);
 #if ENABLE_RUMBLE
@@ -199,6 +206,13 @@ s32 intro_game_over(void) {
 #endif
 
     print_intro_text();
+
+    {
+        if (gPlayer1Controller->buttonDown == QUIT_LEVEL_SELECT_COMBO)
+            gDebugLevelSelect = TRUE;
+        else
+            gDebugLevelSelect = FALSE;
+    }
 
     if (gPlayer1Controller->buttonPressed & START_BUTTON) {
         play_sound(SOUND_MENU_STAR_SOUND, gGlobalSoundSource);
