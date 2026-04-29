@@ -86,11 +86,9 @@ ALIGNED8 static const Texture texture_hud_char_I[] = {
 #include "textures/segment2/segment2.02400.rgba16.inc.c"
 };
 
-#if defined(VERSION_JP) || defined(VERSION_SH)
 ALIGNED8 static const Texture texture_hud_char_J[] = {
 #include "textures/segment2/segment2.02600.rgba16.inc.c"
 };
-#endif
 
 ALIGNED8 static const Texture texture_hud_char_K[] = {
 #include "textures/segment2/segment2.02800.rgba16.inc.c"
@@ -10931,7 +10929,7 @@ const Texture *const main_hud_lut[] = {
     texture_hud_char_mario_head, texture_hud_char_star,    0x0,                0x0,
     texture_hud_char_apostrophe, texture_hud_char_double_quote, texture_hud_char_umlaut,
 #elif defined(VERSION_CN) || defined(VERSION_US)
-    texture_hud_char_G, texture_hud_char_H, texture_hud_char_I,                0x0,
+    texture_hud_char_G, texture_hud_char_H, texture_hud_char_I, texture_hud_char_J,
     texture_hud_char_K, texture_hud_char_L, texture_hud_char_M, texture_hud_char_N,
     texture_hud_char_O, texture_hud_char_P,                0x0, texture_hud_char_R,
     texture_hud_char_S, texture_hud_char_T, texture_hud_char_U,                0x0,
